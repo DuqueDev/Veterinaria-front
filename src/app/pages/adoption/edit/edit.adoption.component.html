@@ -1,0 +1,68 @@
+<h1 mat-dialog-title>Registrar adopcion</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar adopcion</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese nombre de la mascota </mat-label>
+    <input matInput [(ngModel)]="namePet" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la edad de la mascota</mat-label>
+    <input matInput [(ngModel)]="age">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese disponible o adoptado</mat-label>
+    <input matInput [(ngModel)]="status">
+    <div>
+      <h1>{{photo}}</h1>
+      <img [src]="photo" [ngStyle]="{'opacity': status === 'adoptado' ? '0.5' : '1'}">
+      <p>Estado: {{status}}</p>
+    </div>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese disponible o adoptado</mat-label>
+    <input matInput [(ngModel)]="photo">
+    <img src="data:image/jpe;base64,{{photo}}" alt="Imagen codificada en Base64">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la especie</mat-label>
+    <input matInput [(ngModel)]="species">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese una descripcion corta o cuidados especiales que pueda tener la mascota</mat-label>
+    <input matInput [(ngModel)]="description">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la identificacion del adoptante</mat-label>
+    <input matInput [(ngModel)]="identificationAdopter">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la direccion del adoptante</mat-label>
+    <input matInput [(ngModel)]="addressAdopter">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el telefono del adoptante</mat-label>
+    <input matInput [(ngModel)]="telephoneAdopter">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione la vacuna que tenga la mascota </mat-label>
+    <mat-select [(value)]="selectedvaccineId">
+      <mat-option *ngFor="let vaccines of vaccine" [value]="vaccine.id">
+        {{ vaccine.name}}
+        <input matInput [(ngModel)]="nameVaccine" />
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <button (click)="updateAdoption()">Guardar</button>
+  </div>

@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Edita Mascota</h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nombre actualizado</mat-label>
+    <input matInput [(ngModel)]="nombre" />
+  </mat-form-field>
+
+  <h4>Actualizar edad</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la edad actualizada</mat-label>
+    <input matInput [(ngModel)]="edad" />
+  </mat-form-field>
+
+
+<h4>Actualizar especie</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la especie actualizada</mat-label>
+    <input matInput [(ngModel)]="especie" />
+  </mat-form-field>
+
+  <h4>Actualizar raza</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la raza actualizada</mat-label>
+    <input matInput [(ngModel)]="raza" />
+  </mat-form-field>
+
+  <h4>Actualizar color</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el color actualizado</mat-label>
+    <input matInput [(ngModel)]="color" />
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button (click)="updatePet()">Actualizar</button>
+</div>

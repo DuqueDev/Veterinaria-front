@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Registrar Productos</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar un Producto</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Tipo de Producto</mat-label>
+    <input matInput [(ngModel)]="tipoProducto">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Ingrese nombre del Producto </mat-label>
+    <input matInput [(ngModel)]="nombreProducto">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el valor por unidad del producto</mat-label>
+    <input matInput [(ngModel)]="valor">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese cantidad</mat-label>
+    <input matInput [(ngModel)]="cantidad">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="saveProduct()">Guardar</button>
+</div>

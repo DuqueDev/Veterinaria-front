@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Edita Doctor</h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el tipo de producto</mat-label>
+    <input matInput [(ngModel)]="tipoProducto" />
+  </mat-form-field>
+
+  <h4>Actualizar el nombre del producto</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el nombre del producto</mat-label>
+    <input matInput [(ngModel)]="nombreProducto" />
+  </mat-form-field>
+
+  <h4>Actualizar el valor</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nuevo valor</mat-label>
+    <input matInput [(ngModel)]="valor" />
+  </mat-form-field>
+
+  <h4>Actualizar cantidad</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la nueva cantidad</mat-label>
+    <input matInput [(ngModel)]="cantidad" />
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateProduct()">Actualizar</button>
+</div>

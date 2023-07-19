@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Registrar Sintoma</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar los sintomas</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese descripcion del sintoma</mat-label>
+    <input matInput [(ngModel)]="description" />
+  </mat-form-field>
+
+  <h4>Basic mat-select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nombre del posible diagnostico</mat-label>
+    <mat-select [(value)]="selectedIdDiagnosis">
+      <mat-option *ngFor="let diagnostic of diagnosis" [value]="diagnostic.id">
+        {{ diagnostic.nameDiagnosis }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="saveSymptom()">Guardar</button>
+</div>

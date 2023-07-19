@@ -1,0 +1,68 @@
+<h1 mat-dialog-title>Registrar adopcion</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar adopcion</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese nombre de la mascota </mat-label>
+    <input matInput [(ngModel)]="namePet" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la edad de la mascota</mat-label>
+    <input matInput [(ngModel)]="age" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese disponible o adoptado</mat-label>
+    <input matInput [(ngModel)]="status" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la especie</mat-label>
+    <input matInput [(ngModel)]="species" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label
+      >Ingrese una descripcion corta o cuidados especiales que pueda tener la
+      mascota</mat-label
+    >
+    <input matInput [(ngModel)]="description" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la identificacion del adoptante</mat-label>
+    <input matInput [(ngModel)]="identificationAdopter" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la direccion del adoptante</mat-label>
+    <input matInput [(ngModel)]="addressAdopter" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el telefono del adoptante</mat-label>
+    <input matInput [(ngModel)]="telephoneAdopter" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione la vacuna que tenga la mascota </mat-label>
+    <mat-select [(value)]="selectedvaccineId">
+      <mat-option *ngFor="let vaccine of vaccines" [value]="vaccine.id">
+        {{ vaccine.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="mat-form-field">
+    <button type="button" mat-raised-button (click)="fileInput.click()">
+      Seleccione la foto de su mascota
+    </button>
+    <input hidden (change)="setPetPhoto($event)" #fileInput type="file" />
+    <span class="file-name">{{ selectedFile?.name }}</span>
+  </div>
+
+  <div class="mat-form-field" style="margin-top:10px;">
+    <button type="button" color="primary" mat-button (click)="saveAdoption()">Guardar</button>
+  </div>
+</div>

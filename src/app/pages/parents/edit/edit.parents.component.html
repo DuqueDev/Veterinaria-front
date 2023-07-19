@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Edita Propietario</h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice cedula del propietario</mat-label>
+    <input matInput [(ngModel)]="cedula" />
+  </mat-form-field>
+
+  <h4>Actualizar Nombre</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nombre del propietario</mat-label>
+    <input matInput [(ngModel)]="nombre" />
+  </mat-form-field>
+
+  <h4>Actualizar Apellido</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese apellido del propietario</mat-label>
+    <input matInput [(ngModel)]="apellido" />
+  </mat-form-field>
+
+  <h4>Actualizar Dirección</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la direccion del propietario</mat-label>
+    <input matInput [(ngModel)]="direccion" />
+  </mat-form-field>
+
+  <h4>Actualizar número de telefono</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el Telefono del propietario</mat-label>
+    <input matInput [(ngModel)]="telefono" />
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateParent()">Actualizar</button>
+</div>

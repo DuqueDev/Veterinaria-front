@@ -1,0 +1,61 @@
+<h1 mat-dialog-title>Actualiza los datos de la cita </h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el motivo de la cita </mat-label>
+    <input matInput [(ngModel)]="descripcion" />
+  </mat-form-field>
+
+  <p>Actualice la fecha de registro</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la fecha de registro</mat-label>
+    <input matInput [(ngModel)]="fechaRegistro" />
+  </mat-form-field>
+
+  <p>Actualice el peso del paciente</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el peso del paciente</mat-label>
+    <input matInput [(ngModel)]="peso" />
+  </mat-form-field>
+
+  <p>Actualice la temperatura del paciente</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese la temperatura del paciente</mat-label>
+    <input matInput [(ngModel)]="temperatura" />
+  </mat-form-field>
+
+  <h4>Actualice el nombre de la mascota</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el nombre de la mascota</mat-label>
+    <mat-select [(value)]="SelectedIdPets">
+      <mat-option *ngFor="let pet of pet" [value]="pet.id">
+        {{ pet.nombre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Actualice el nombre del doctor</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el nombre del Doctor</mat-label>
+    <mat-select [(value)]="SelectedIdDoctor">
+      <mat-option *ngFor="let doctor of doctor" [value]="doctor.id">
+        {{ doctor.nombre}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Actualice el diagnostico de la cita </h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el diagnostico de la cita</mat-label>
+    <mat-select [(value)]="selectedIdDiagnosis">
+      <mat-option *ngFor="let diagnosis of diagnosis" [value]="diagnosis.id">
+        {{ diagnosis.nameDiagnosis}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateAppointment()">Actualizar</button>
+</div>

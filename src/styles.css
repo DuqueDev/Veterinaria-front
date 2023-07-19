@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+th, td {
+  overflow: hidden;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left:8px!important;
+}
+
+.mat-cell {
+  padding: 8px 8px 8px 0;
+}
+
+#table-title-bar {
+  background: #218be1;
+  color: white;
+  padding: 4px;
+  height: 90px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+
+#table-title-bar h2 {
+  margin-left: 8px;
+}
+
+.btn-add {
+  margin-left: auto;
+  align-self: center;
+  background: #4cadf5!important;
+  margin-right: 16px!important;
+}
+
+.btn-delete {
+  float: right;
+  margin-right: 32px!important;
+  margin-top: 22px!important;
+  background: #4cadf5!important;
+}
+
+.title-icon {
+  display: flex;
+  align-items: center;
+  margin-left:16px;
+}

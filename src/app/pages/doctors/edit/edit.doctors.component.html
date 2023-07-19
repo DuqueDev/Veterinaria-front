@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Edita Doctor</h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el nombre del doctor</mat-label>
+    <input matInput [(ngModel)]="nombre" />
+  </mat-form-field>
+
+  <h4>Actualizar Especialidad</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice la especialidad</mat-label>
+    <input matInput [(ngModel)]="especialidad" />
+  </mat-form-field>
+
+  <h4>Actualizar cedula</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese cedula actualizada</mat-label>
+    <input matInput [(ngModel)]="cedula" />
+  </mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateDoctor()">Actualizar</button>
+</div>

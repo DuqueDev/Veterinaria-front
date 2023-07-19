@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Registrar Diagnostico</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar un Diagnostico</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Nombre</mat-label>
+    <input matInput [(ngModel)]="nameDiagnosis">
+
+<div mat-dialog-actions>
+  <button (click)="saveDiagnosis()">Guardar</button>
+</div>

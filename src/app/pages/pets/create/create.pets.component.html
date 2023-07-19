@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Registrar Mascota</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar la mascota</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese edad</mat-label>
+    <input matInput [(ngModel)]="edad">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese especie</mat-label>
+    <input matInput [(ngModel)]="especie">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese raza</mat-label>
+    <input matInput [(ngModel)]="raza">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese color</mat-label>
+    <input matInput [(ngModel)]="color">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese cedula del propietario</mat-label>
+    <input matInput [(ngModel)]="cedulaPropietario">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="savePet()">Guardar</button>
+</div>

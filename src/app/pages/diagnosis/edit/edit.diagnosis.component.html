@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Edita Diagnostico</h1>
+<div mat-dialog-content>
+  <p>Ingrese los datos para actualizar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Actualice el nombre del diagnostico</mat-label>
+    <input matInput [(ngModel)]="nameDiagnosis" />
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button (click)="updateDiagnosis()">Actualizar</button>
+</div>
+

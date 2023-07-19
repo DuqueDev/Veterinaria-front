@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Registrar Doctores</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar un Doctor</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese especialidad </mat-label>
+    <input matInput [(ngModel)]="especialidad">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese cedula</mat-label>
+    <input matInput [(ngModel)]="cedula">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="saveDoctors()">Guardar</button>
+</div>

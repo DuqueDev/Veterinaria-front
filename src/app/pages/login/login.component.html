@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+      <h2>Login</h2>
+        <form (ngSubmit)="login()">
+          <div class="form-group row">
+            <label for="Nombre Usuario" class="label col-sm-3 col-form-label">Nombre de Usuario</label>
+            <div class="col-sm-9">
+              <input type="text" [(ngModel)] = "userName" name="userName" nbInput fullWidth placeholder="Ingrese nombre de usuario">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="contrasena" class="label col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" [(ngModel)] = "password" name="password" nbInput fullWidth id="inputPassword2" placeholder="Contraseña">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit" nbButton status="primary">Login</button>
+            </div>
+          </div>
+        </form>
+
+  </div>
+</div>

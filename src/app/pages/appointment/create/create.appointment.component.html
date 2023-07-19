@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>Registrar cita</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar la cita</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Descripcion</mat-label>
+    <input matInput [(ngModel)]="descripcion" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Ingrese Fecha de Registro</mat-label>
+    <input matInput type="datetime-local" placeholder="start date" [(ngModel)]="fechaRegistro">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Peso</mat-label>
+    <input matInput type="number" min="1" [(ngModel)]="peso" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese Temperatura</mat-label>
+    <input matInput type="number" [(ngModel)]="temperatura" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione el nombre de la mascota</mat-label>
+    <mat-select [(value)]="selectedIdPet">
+      <mat-option *ngFor="let pet of pets" [value]="pet.id">
+        {{ pet.nombre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione del doctor</mat-label>
+    <mat-select [(value)]="selectedIdDoctor">
+      <mat-option *ngFor="let doctors of doctor" [value]="doctors.id">
+        {{ doctors.nombre }}
+        <input matInput [(ngModel)]="nombreDoctor" />
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nombre del posible diagnostico</mat-label>
+    <mat-select [(value)]="selectedIdDiagnosis">
+      <mat-option *ngFor="let diagnostic of diagnosis" [value]="diagnostic.id">
+        {{ diagnostic.nameDiagnosis }}
+        <input matInput [(ngModel)]="nameDiagnosis" />
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button (click)="saveAppointment()">Guardar</button>
+  </div>
+</div>

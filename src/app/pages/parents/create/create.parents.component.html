@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Registrar propietario</h1>
+<div mat-dialog-content>
+  <p>Complete los datos para registrar el propietario</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese cédula</mat-label>
+    <input matInput [(ngModel)]="cedula">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese el nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese apellido</mat-label>
+    <input matInput [(ngModel)]="apellido">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese direccion</mat-label>
+    <input matInput [(ngModel)]="direccion">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Ingrese numero de contacto</mat-label>
+    <input matInput [(ngModel)]="telefono">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="save()">Guardar</button>
+</div>
